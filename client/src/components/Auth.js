@@ -41,16 +41,20 @@ export default function Auth() {
         <form>
           <h2> {  isLogIn ? 'Please Log In' : 'Please Sign Up'}</h2>
           <input 
+          value={email}
           type='email'
           placeholder='email'
           onChange={(e)=>setEmail(e.target.value)}
           />
           <input
+          value={password}
            type='password'
           placeholder='password'
-          onChange={(e)=>setPassword(e.target.value)}
+          onChange={(e)=>setPassword(e.target.value)
+          }
           />
           {!isLogIn && <input
+          value={confirmPassword}
           type='password'
           placeholder='confirm password'
           onChange={(e)=>setConfirmPassword(e.target.value)}
